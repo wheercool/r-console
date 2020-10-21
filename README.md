@@ -20,7 +20,7 @@ Sticky bottom bar 2
 ```
 ## Install
 ```
-$ npm install r-console
+$ npm install @wheercool/r-console
 ```
 Features:
 * Colored messages

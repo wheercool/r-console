@@ -1,6 +1,6 @@
 {
-  "name": "console-dashboard",
-  "version": "0.1.0",
+  "name": "@wheercool/r-console",
+  "version": "0.1.1",
   "main": "index.js",
   "author": "Alexander Rudy",
   "homepage": "https://github.com/wheercool/r-console",
