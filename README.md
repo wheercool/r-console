@@ -1,11 +1,11 @@
-#r-console
+# r-console
 `RConsole` is a library that helps to display realtime information in the console. 
 It adds a concept of `Bar` - group of lines sticked to the bottom of the console.
 `Bars` makes possible to display general information all the time despite other printed messages.
 Each bar can be updated asynchronous and independently.
 All these features makes possible to create console-based dashboards easily.
 
-##Console layout
+## Console layout
 All messages will be printed above bottom bars.
 There are 2 bottom bars. They will always be displayed  at the bottom of the console.
 ```
@@ -26,7 +26,7 @@ Features:
 * Colored messages
 * Sticky bottom bars
 
-##Colored messages
+## Colored messages
 Wrapping message with color tag will change the color of the text inside this tag.
 
 To run it locally:
@@ -41,7 +41,7 @@ RConsole.print('<red>Colored message</red>');
 RConsole.print('<magenta>Colors <red>can be nested</red>, cool!</magenta>')
 
 ```
-###Available colors: 
+### Available colors: 
  * `red`
  * `green`
  * `yellow`
@@ -51,11 +51,11 @@ RConsole.print('<magenta>Colors <red>can be nested</red>, cool!</magenta>')
  * `white`
  * `black`
 
-##Sticky bottom bars
+## Sticky bottom bars
 It is possible to add multiple bottom bars. All printed messages (RConsole.print) will appear above
 added bars. It is handy to display monitoring information in that way. 
 
-##Progress bar example
+## Progress bar example
 To run it locally:
 ```
 $ npm run example2
@@ -88,7 +88,7 @@ let handle = setInterval(() => {
 }, 500);
 ```
 
-##Multiple independent bars
+## Multiple independent bars
 It is possible to add more than one bar and update them independently.
 
 To run it locally:
@@ -162,12 +162,12 @@ Adds a sticky bottom bar at the bottom of console. Bar will not be displayed aut
 To display bar see `Bar.update()` method.
 
 ### config
-####size
+#### size
 Type: `number`
 
 Number of lines that bar takes.
 
-####template
+#### template
 Type: `function`
 
 ReturnType: `coloredString[]`
@@ -178,7 +178,7 @@ passed to `template`. The result must be an array of `size` strings.
 ## Bar.update(...values)
 Displays/Updates the bar with new `values`. 
 
-###values
+### values
 Type: `...any`
 
 Values that will be passed to `template` callback.
