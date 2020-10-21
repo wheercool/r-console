@@ -1,0 +1,29 @@
+{
+  "name": "console-dashboard",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Alexander Rudy",
+  "homepage": "https://github.com/wheercool/r-console",
+  "description": "RConsole is a library that helps to display realtime information and build dashboards in the console",
+  "keywords": [
+    "console",
+    "colored",
+    "dashboard",
+    "realtime"
+  ],
+  "bugs": {
+    "url": "https://github.com/wheercool/r-console/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wheercool/r-console.git"
+  },
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "scripts": {
+    "example1": "node examples/coloredMessage.js",
+    "example2": "node examples/stickyBar.js",
+    "exapmle3": "node examples/multipleBars.js"
+  }
+}
