@@ -2,9 +2,9 @@ const { color } = require('./utils');
 const { RBar } = require('./RBar');
 
 class RConsole {
-  bars = [];
 
   constructor() {
+    this.bars = [];
     if (!process.stdout.isTTY) {
       throw new Error('It works only in TTY');
     }

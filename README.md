@@ -1,7 +1,7 @@
 # r-console
-`RConsole` is a library that helps to display realtime information in the console. 
+`RConsole` is a library that helps display realtime information in the console. 
 It adds a concept of `Bar` - group of lines sticked to the bottom of the console.
-`Bars` makes possible to display general information all the time despite other printed messages.
+`Bars` make possible to display general information all the time despite other printed messages.
 Each bar can be updated asynchronous and independently.
 All these features makes possible to create console-based dashboards easily.
 
