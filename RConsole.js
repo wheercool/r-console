@@ -1,28 +1,29 @@
-const { color } = require('./utils');
-const { RBar } = require('./RBar');
+const {color} = require('./utils');
+const {RBar} = require('./RBar');
 
 class RConsole {
 
   constructor() {
     this.bars = [];
-    if (!process.stdout.isTTY) {
-      throw new Error('It works only in TTY');
+    if (process.stdout.isTTY) {
+      this.hideCursor();
+      process.on('exit', () => {
+        this.showCursor();
+      })
     }
-    this.hideCursor();
-    process.on('exit', () => {
-      this.showCursor();
-    })
   }
 
   addBar(config) {
     const bar = new RBar(config)
-    bar.on('changed', (event) => {
+    if (process.stdout.isTTY) {
+      bar.on('changed', (event) => {
+        this.hideBars();
+        this.showBars();
+      })
       this.hideBars();
+      this.bars.push(bar);
       this.showBars();
-    })
-    this.hideBars();
-    this.bars.push(bar);
-    this.showBars();
+    }
     return bar
   };
 
